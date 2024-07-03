@@ -126,6 +126,10 @@ type StorageNodeSpec struct {
 	// +optional
 	HostNetwork bool `json:"hostNetwork,omitempty"`
 
+	// (Optional) If specified, the pod's security context
+	// +optional
+	SecurityContext *corev1.PodSecurityContext `json:"securityContext,omitempty"`
+
 	// (Optional) NodeSelector is a selector which must be true for the pod to fit on a node.
 	// Selector which must match a node's labels for the pod to be scheduled on that node.
 	// More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
